@@ -19,12 +19,28 @@ body {
   color: hsl(210, 10%, 33%);
   text-align: center;
   font-size: 18px;
-  width: 100%;
-}
-body .header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
   background: url(../images/bg-header-mobile.png) no-repeat;
   background-size: contain;
+}
+@media screen and (min-width: 675px) {
+  body {
+    background: url(../images/bg-header-desktop.png) no-repeat;
+    background-size: contain;
+  }
+}
+body .header {
   padding: 2rem;
+}
+@media screen and (min-width: 675px) {
+  body .header {
+    width: 630px;
+  }
 }
 body .header-top h1 {
   margin: 1rem 0;
@@ -40,8 +56,23 @@ body .header-bot_title p {
   color: hsl(201, 11%, 66%);
   margin: 1rem 0;
 }
+@media screen and (min-width: 675px) {
+  body .header-bot_desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: start;
+  }
+}
 body .header-bot_desc img {
   width: 100%;
+}
+@media screen and (min-width: 675px) {
+  body .header-bot_desc img {
+    width: 80%;
+    margin-left: -220px;
+  }
 }
 body .header-bot_desc h3 {
   margin: 1rem 0;
@@ -53,12 +84,22 @@ body .main {
   margin-top: 5rem;
   padding: 2rem;
 }
+@media screen and (min-width: 675px) {
+  body .main {
+    width: 630px;
+  }
+}
 body .main-body_texts img {
   width: 100%;
   margin: 2rem 0;
 }
 body .main-body_texts svg {
   margin: 2rem 0;
+}
+@media screen and (min-width: 675px) {
+  body .main-body_texts__wrapper {
+    display: flex;
+  }
 }
 body .main-body_logos {
   margin: 6rem 0;
@@ -68,7 +109,15 @@ body .main-body_logos {
   flex-direction: column;
   gap: 5rem;
 }
+@media screen and (min-width: 675px) {
+  body .main-body_logos {
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+}
 body .footer {
+  width: 100%;
   padding: 2rem;
   margin-top: 5rem;
   display: flex;
@@ -125,7 +174,15 @@ h3 {
   font-size: 1.6rem;
 }
 
-button {
+@media screen and (min-width: 675px) {
+  .btnholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+.btnholder button {
   width: 100%;
   padding: 0.9rem;
   margin-top: 1rem;
@@ -134,7 +191,7 @@ button {
   border-radius: 9rem;
   transition: background-color 200ms ease;
 }
-button a {
+.btnholder button a {
   text-decoration: none;
   color: white;
   font-family: BJJB;
